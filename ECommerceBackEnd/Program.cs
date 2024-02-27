@@ -24,6 +24,8 @@ builder.Services.AddSwaggerGen(options =>
 //Register DataContext
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("Connection")));
+//
+//builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 
 builder.Services.AddAuthorization();
 
